@@ -8,12 +8,12 @@
 #X obj 39 243 phasor~;
 #X floatatom 47 183 12 0 0 0 - - -;
 #X obj 267 99 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
+-1 -1 0 1;
 #X floatatom 264 119 5 0 0 0 - - -;
 #X msg 184 190 0;
 #X msg 185 209 0.5;
 #X obj 39 293 *~;
-#X obj 236 256 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 236 256 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 236 276 metro 50;
 #X obj 236 296 snapshot~;
@@ -73,7 +73,7 @@
 #X obj 69 434 outlet~;
 #X obj 85 11 inlet;
 #X obj 409 489 hsl 100 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4950 1;
+-1 -1 0 1;
 #X obj 233 228 loadbang;
 #X obj 408 426 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -87,11 +87,9 @@
 #X obj 39 52 pack s \$0;
 #X obj 39 313 tabread4~ \$0-chL;
 #X obj 58 332 tabread4~ \$0-chR;
-#X obj 473 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 475 51 print \$0-chR;
-#X obj 461 75 print \$0-chL;
 #X msg 39 73 read -resize \$1 \$2-chL \$2-chR;
+#X text 40 565 Octopus2 by Lomz.net;
+#X text 40 584 2021;
 #X connect 0 0 1 0;
 #X connect 1 0 63 0;
 #X connect 2 0 4 0;
@@ -141,10 +139,8 @@
 #X connect 57 0 56 0;
 #X connect 62 0 7 0;
 #X connect 62 0 54 0;
-#X connect 63 0 69 0;
+#X connect 63 0 66 0;
 #X connect 64 0 32 0;
 #X connect 65 0 33 0;
-#X connect 66 0 67 0;
-#X connect 66 0 68 0;
-#X connect 69 0 2 0;
+#X connect 66 0 2 0;
 #X coords 0 -1 1 1 120 250 2 400 300;
