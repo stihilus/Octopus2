@@ -1,0 +1,107 @@
+#N canvas 293 107 730 420 10;
+#X obj 23 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 23 187 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 70 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 23 116 float;
+#X obj 60 116 + 1;
+#X obj 22 139 mod 2;
+#X obj 23 162 select 0 1;
+#X obj 112 189 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 139 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 111 141 mod 4;
+#X obj 112 164 select 0 1 2 3;
+#X obj 159 189 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 186 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 253 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 271 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 289 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 307 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 275 98 mod 8;
+#X obj 276 121 select 0 1 2 3 4 5 6 7;
+#X obj 325 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 343 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 362 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 381 226 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
+-1 -1;
+#X obj 119 355 outlet;
+#X obj 234 354 outlet;
+#X obj 383 351 outlet;
+#X obj 22 358 outlet;
+#X obj 23 57 inlet;
+#X obj 381 242 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -262144
+0;
+#X obj 253 242 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -262144
+0;
+#X obj 271 242 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -262144
+0;
+#X obj 307 242 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -262144
+0;
+#X text 251 246 1;
+#X text 251 208 Divider;
+#X obj 380 328 float;
+#X obj 420 328 + 1;
+#X text 290 246 /2;
+#X text 337 246 /4;
+#X text 381 246 /8;
+#X obj 251 201 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X text 19 33 tempo;
+#X text 21 378 tempo;
+#X text 115 378 tempo;
+#X text 230 375 tempo;
+#X text 380 372 tempo;
+#X obj 251 263 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 291 263 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 339 263 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 384 263 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 1 0 26 0;
+#X connect 2 0 23 0;
+#X connect 3 0 4 0;
+#X connect 3 0 17 0;
+#X connect 3 0 5 0;
+#X connect 3 0 9 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 6 1 2 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 10 1 8 0;
+#X connect 10 2 11 0;
+#X connect 10 3 12 0;
+#X connect 12 0 24 0;
+#X connect 17 0 18 0;
+#X connect 18 0 13 0;
+#X connect 18 1 14 0;
+#X connect 18 2 15 0;
+#X connect 18 3 16 0;
+#X connect 18 4 19 0;
+#X connect 18 5 20 0;
+#X connect 18 6 21 0;
+#X connect 18 7 22 0;
+#X connect 22 0 34 0;
+#X connect 27 0 0 0;
+#X connect 34 0 35 0;
+#X connect 34 0 25 0;
+#X connect 35 0 34 1;
+#X coords 0 -1 1 1 149 68 2 250 200;

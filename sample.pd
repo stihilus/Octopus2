@@ -1,0 +1,120 @@
+#N canvas 0 25 1408 783 10;
+#X obj 477 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 30 29 openpanel;
+#X obj 31 85 soundfiler;
+#X floatatom 65 125 12 0 0 0 - - -;
+#X obj 31 169 expr 44100 / $f1;
+#X floatatom 65 194 12 0 0 0 - - -;
+#X obj 66 369 phasor~;
+#X obj 67 433 *~;
+#X obj 283 450 snapshot~;
+#X obj 283 407 metro 50;
+#X floatatom 283 472 12 0 0 0 - - -;
+#X obj 283 379 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 282 516 /, f 4;
+#X floatatom 281 539 5 0 0 0 - - -;
+#X obj 284 561 hsl 195 21 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9149 1;
+#X obj 68 247 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9525 1;
+#X floatatom 65 267 5 0 0 0 - - -;
+#X msg 119 333 0;
+#X msg 117 293 1;
+#X text 115 273 start;
+#X text 116 312 pause;
+#X obj 281 344 loadbang;
+#X obj 515 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 450 121 hsl 60 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4425 1;
+#X obj 447 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 502 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 464 138 start;
+#X text 518 138 pause;
+#X text 449 120 speed;
+#X text 59 211 normal playback;
+#X text 59 222 speed;
+#X floatatom 232 224 5 0 0 0 - - -;
+#X obj 306 121 hsl 136 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6366 1;
+#X obj 530 255 float;
+#X obj 514 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -191407 -1
+-1;
+#X floatatom 529 288 5 0 0 0 - - -;
+#X obj 529 309 / 100;
+#X floatatom 535 353 5 0 0 0 - - -;
+#X text 495 102 Load sample;
+#X obj 306 139 hsl 136 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 600 1;
+#X text 497 57 1;
+#X obj 198 654 outlet~;
+#X obj 198 534 *~;
+#X obj 214 396 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X text 306 121 Play Position;
+#X text 303 140 Start Postion;
+#X obj 514 19 inlet;
+#X text 534 121 n.s.;
+#N canvas 0 25 450 300 (subpatch) 0;
+#X array \$0-channelL1 88201 float 0;
+#X coords 0 1 88200 -1 150 55 1 0 0;
+#X restore 303 169 graph;
+#X msg 214 371 1;
+#X text 303 102 Sampler01;
+#X msg 112 26 read -resize \$1 \$0-channelL1;
+#X msg 31 56 read -resize \$1 \$0-channelL1;
+#X obj 65 147 s \$0-sampleSize1;
+#X obj 68 463 tabread4~ \$0-channelL1;
+#X connect 0 0 1 0;
+#X connect 1 0 52 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 7 1;
+#X connect 3 0 12 1;
+#X connect 3 0 53 0;
+#X connect 4 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 15 0;
+#X connect 5 0 31 0;
+#X connect 5 0 23 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 54 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 12 0;
+#X connect 11 0 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 32 0;
+#X connect 15 0 16 0;
+#X connect 16 0 6 0;
+#X connect 17 0 6 0;
+#X connect 18 0 6 0;
+#X connect 18 0 15 0;
+#X connect 21 0 11 0;
+#X connect 21 0 49 0;
+#X connect 22 0 31 0;
+#X connect 23 0 15 0;
+#X connect 24 0 18 0;
+#X connect 24 0 31 0;
+#X connect 25 0 17 0;
+#X connect 31 0 15 0;
+#X connect 31 0 23 0;
+#X connect 33 0 35 0;
+#X connect 34 0 33 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 6 1;
+#X connect 39 0 33 1;
+#X connect 42 0 41 0;
+#X connect 43 0 42 1;
+#X connect 46 0 34 0;
+#X connect 49 0 43 0;
+#X connect 52 0 2 0;
+#X connect 54 0 42 0;
+#X coords 0 -1 1 1 270 150 2 300 100;
