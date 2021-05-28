@@ -1,48 +1,54 @@
-#N canvas 121 83 1203 692 12;
-#X obj 31 67 clock;
+#N canvas 214 25 1203 692 12;
+#X obj 13 52 clock;
 #X obj 13 14 dsp;
-#X obj 32 176 seq16;
-#X obj 164 16 cnv 15 15 15 empty empty Tempo 18 8 0 14 -159808 -66577
-0;
-#X obj 233 16 cnv 15 15 15 empty empty BTN 18 8 0 14 -4034 -66577 0
-;
+#X obj 13 162 seq16;
+#X obj 91 15 cnv 15 15 15 empty empty Btn_in_-_Tempo 18 8 0 14 -159808
+-66577 0;
+#X obj 235 15 cnv 15 15 15 empty empty BTN_in_Poke 18 8 0 14 -4034
+-66577 0;
 #X obj 147 55 divider;
 #X obj 32 270 kick;
-#X obj 287 16 cnv 15 15 15 empty empty AUDIO 18 8 0 14 -260097 -66577
+#X obj 354 15 cnv 15 15 15 empty empty AUDIO 18 8 0 14 -260097 -66577
 0;
 #X obj 399 175 mtoggle;
-#X obj 529 459 mix8;
-#X obj 306 407 audiotodac;
+#X obj 472 374 mix8;
+#X obj 471 486 audiotodac;
 #X obj 182 271 kick;
-#X obj 331 67 seq16;
+#X obj 303 56 seq16;
 #X obj 360 261 kick;
-#X obj 751 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 798 84 player2;
-#X obj 939 84 player2;
 #X obj 519 275 kick;
+#X obj 175 415 sample;
+#X obj 306 417 sample;
+#X obj 624 56 seq16;
+#X obj 36 414 sample;
 #X connect 0 0 5 0;
 #X connect 0 0 2 0;
 #X connect 0 0 8 0;
-#X connect 0 0 14 0;
+#X connect 0 0 17 0;
 #X connect 2 0 6 0;
-#X connect 2 0 16 0;
+#X connect 2 0 15 1;
 #X connect 5 0 12 0;
 #X connect 5 1 11 0;
 #X connect 5 2 8 1;
 #X connect 5 2 2 1;
 #X connect 5 2 12 1;
+#X connect 5 3 17 1;
+#X connect 5 3 16 1;
+#X connect 5 3 18 1;
 #X connect 6 0 9 0;
-#X connect 8 0 17 0;
+#X connect 8 0 14 0;
 #X connect 9 0 10 0;
 #X connect 9 1 10 1;
 #X connect 11 0 9 2;
 #X connect 12 0 13 0;
-#X connect 12 0 15 0;
 #X connect 12 0 8 1;
+#X connect 12 0 15 0;
 #X connect 13 0 9 1;
 #X connect 15 0 9 3;
 #X connect 15 1 9 4;
 #X connect 16 0 9 5;
 #X connect 16 1 9 6;
-#X connect 17 0 9 7;
+#X connect 17 0 16 0;
+#X connect 17 0 18 0;
+#X connect 18 0 9 7;
+#X connect 18 1 9 7;
