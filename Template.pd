@@ -21,6 +21,46 @@
 #X obj 306 417 sample;
 #X obj 624 56 seq16;
 #X obj 36 414 sample;
+#N canvas 896 223 430 528 help 1;
+#X obj 8 9 cnv 15 400 110 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 17 50 1) go to EDIT MODE: CMD+E (MAC) or CTRL+E (WIN);
+#X text 16 73 2) CMD+1 (MAC) or CTRL+1 (WIN) to add an object;
+#X text 16 27 ______________________;
+#X text 16 97 3) type "name";
+#X text 17 19 HOW TO ADD A MODULES;
+#X obj 8 119 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 9 238 clock;
+#X obj 8 330 divider;
+#X obj 8 136 cnv 15 15 15 empty empty BTN_-_Tempo 18 8 0 14 -159808
+-66577 0;
+#X obj 136 136 cnv 15 15 15 empty empty BTN_in_Poke 18 8 0 14 -4034
+-66577 0;
+#X obj 269 136 cnv 15 15 15 empty empty AUDIO 18 8 0 14 -260097 -66577
+0;
+#X obj 8 434 seq16;
+#X text 7 308 divider;
+#X text 5 413 seq16;
+#X obj 8 182 dsp;
+#X text 7 218 clock;
+#X obj 9 594 kick;
+#X obj 7 527 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X text 8 545 instruments;
+#X text 7 573 kick;
+#X obj 7 687 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X text 6 706 samples;
+#X obj 9 731 sample;
+#X obj 7 987 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X text 7 1005 mixers;
+#X obj 9 1029 mix8;
+#X obj 10 1167 audiotodac;
+#X text 6 1145 audiotodac;
+#X text 7 161 name: dsp;
+#X restore 451 16 pd help;
 #X connect 0 0 5 0;
 #X connect 0 0 2 0;
 #X connect 0 0 8 0;
