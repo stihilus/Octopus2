@@ -1,14 +1,14 @@
 #N canvas 214 25 1203 692 12;
 #X obj 13 52 clock;
-#X obj 13 14 dsp;
+#X obj 94 14 dsp;
 #X obj 13 162 seq16;
-#X obj 91 15 cnv 15 15 15 empty empty Btn_in_-_Tempo 18 8 0 14 -159808
+#X obj 522 17 cnv 15 15 15 empty empty Btn_in_-_Tempo 18 8 0 14 -159808
 -66577 0;
-#X obj 235 15 cnv 15 15 15 empty empty BTN_in_Poke 18 8 0 14 -4034
+#X obj 669 17 cnv 15 15 15 empty empty BTN_in_Poke 18 8 0 14 -4034
 -66577 0;
 #X obj 147 55 divider;
 #X obj 32 270 kick;
-#X obj 354 15 cnv 15 15 15 empty empty AUDIO 18 8 0 14 -260097 -66577
+#X obj 791 17 cnv 15 15 15 empty empty AUDIO 18 8 0 14 -260097 -66577
 0;
 #X obj 399 175 mtoggle;
 #X obj 472 374 mix8;
@@ -21,7 +21,7 @@
 #X obj 306 417 sample;
 #X obj 624 56 seq16;
 #X obj 36 414 sample;
-#N canvas 896 223 430 528 help 1;
+#N canvas 896 223 430 528 help 0;
 #X obj 8 9 cnv 15 400 110 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 17 50 1) go to EDIT MODE: CMD+E (MAC) or CTRL+E (WIN);
@@ -60,7 +60,10 @@
 #X obj 10 1167 audiotodac;
 #X text 6 1145 audiotodac;
 #X text 7 161 name: dsp;
-#X restore 451 16 pd help;
+#X restore 863 15 pd help;
+#X text 14 16 OCTOPUS 2;
+#X text 824 646 by lomz.net;
+#X text 824 628 Octopus 2;
 #X connect 0 0 5 0;
 #X connect 0 0 2 0;
 #X connect 0 0 8 0;
