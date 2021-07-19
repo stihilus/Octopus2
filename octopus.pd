@@ -1,0 +1,7 @@
+#N canvas 2377 1192 382 348 10;
+#X obj 102 102 pic 0 octopus.gif empty empty 0 0;
+#X msg 104 57 open octopus.gif;
+#X text 24 253 PIC object from ELSE;
+#X text 22 274 https://github.com/porres/pd-else;
+#X connect 1 0 0 0;
+#X coords 0 -1 1 1 105 134 2 100 100;
