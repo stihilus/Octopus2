@@ -4,18 +4,18 @@
 #X msg 210 294 \$1 \, \$2 \$3;
 #X obj 210 262 pack f f f;
 #X obj 109 73 nbx 3 14 10 999 0 1 empty empty empty -8 8 0 10 -262144
--1 -1 126 256;
+-1 -1 531.756 256;
 #X obj 157 73 nbx 3 15 10 999 0 1 empty empty empty -8 8 0 10 -262144
--1 -1 72 256;
+-1 -1 72.2992 256;
 #X obj 205 73 nbx 3 14 1 500 0 1 empty empty d -8 8 0 10 -262144 -1
--1 114 256;
+-1 56.0079 256;
 #X obj 176 218 float;
 #X obj 172 423 *~;
 #X obj 146 383 *~;
 #X obj 141 349 vline~;
 #X obj 118 297 pack f f;
 #X obj 106 156 hsl 128 8 0 1 0 1 empty empty empty -10 5 0 10 -228856
--159808 -159808 11100 1;
+-159808 -159808 12700 1;
 #X obj 103 200 t f f;
 #X obj 107 226 *;
 #X obj 106 254 * 2000;
@@ -31,11 +31,11 @@
 #X msg 307 304 0.25;
 #X obj 51 125 / 128;
 #X obj 106 123 hsl 128 8 10 999 0 0 empty empty empty -2 -8 0 10 -228856
--159808 -1 1490 1;
+-159808 -1 6790 1;
 #X obj 106 134 hsl 128 8 10 999 0 0 empty empty empty -2 -8 0 10 -228856
--159808 -1 796 1;
+-159808 -1 896 1;
 #X obj 106 145 hsl 128 8 1 500 0 0 empty empty empty -2 -8 0 10 -228856
--159808 -159808 2876 1;
+-159808 -159808 1476 1;
 #X msg 14 83 127;
 #X text 102 107 Kick;
 #X msg 259 100 126;
@@ -49,6 +49,14 @@
 0;
 #X obj 101 169 cnv 5 15 5 empty empty empty 20 12 0 14 -260097 -66577
 0;
+#X floatatom 434 51 5 0 0 0 - - -;
+#X msg 434 71;
+#X obj 444 146 line;
+#X obj 502 154;
+#X floatatom 444 167 5 0 0 0 - - -;
+#X msg 484 122 1000;
+#X msg 467 87 1 1000;
+#X msg 434 104 0 1000;
 #X connect 0 0 8 1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
@@ -95,4 +103,10 @@
 #X connect 34 0 28 0;
 #X connect 35 0 29 0;
 #X connect 36 0 12 0;
+#X connect 40 0 41 0;
+#X connect 42 0 44 0;
+#X connect 44 0 12 0;
+#X connect 45 0 42 1;
+#X connect 46 0 42 0;
+#X connect 47 0 42 0;
 #X coords 0 -1 1 1 139 75 2 100 100;

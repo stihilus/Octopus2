@@ -1,0 +1,39 @@
+#N canvas 293 107 730 420 10;
+#X obj 73 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 253 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 309 223 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 73 162 select 0 1;
+#X obj 119 295 outlet;
+#X obj 22 298 outlet;
+#X obj 73 17 inlet;
+#X obj 22 276 float;
+#X obj 62 276 + 1;
+#X obj 118 269 float;
+#X obj 158 269 + 1;
+#X floatatom 81 135 5 0 0 0 - - -;
+#X obj 81 115 random 2;
+#X text 252 206 Probability;
+#X obj 251 201 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 251 243 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 311 243 cnv 5 15 5 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X connect 0 0 12 0;
+#X connect 1 0 7 0;
+#X connect 2 0 9 0;
+#X connect 3 0 1 0;
+#X connect 3 1 2 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 1;
+#X connect 9 0 10 0;
+#X connect 9 0 4 0;
+#X connect 10 0 9 1;
+#X connect 11 0 3 0;
+#X connect 12 0 11 0;
+#X coords 0 -1 1 1 77 48 2 250 200;

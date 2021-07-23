@@ -1,16 +1,16 @@
-#N canvas 1067 905 1203 692 12;
-#X obj 13 52 clock;
-#X obj 94 14 dsp;
-#X obj 522 17 cnv 15 15 15 empty empty Btn_in_-_Tempo 18 8 0 14 -159808
+#N canvas 65 53 1203 692 12;
+#X obj 17 47 clock;
+#X obj 17 19 dsp;
+#X obj 708 649 cnv 15 15 15 empty empty Btn_in_-_Tempo 18 8 0 14 -159808
 -66577 0;
-#X obj 669 17 cnv 15 15 15 empty empty BTN_in_Poke 18 8 0 14 -4034
--66577 0;
-#X obj 117 52 divider;
-#X obj 791 17 cnv 15 15 15 empty empty AUDIO 18 8 0 14 -260097 -66577
+#X obj 848 650 cnv 15 15 15 empty empty Parametar_Change 18 8 0 14
+-4034 -66577 0;
+#X obj 122 46 divider;
+#X obj 1004 650 cnv 15 15 15 empty empty Audio 18 8 0 14 -260097 -66577
 0;
-#X obj 472 374 mix8;
-#X obj 532 493 audiotodac;
-#N canvas 896 223 430 528 help 0;
+#X obj 457 378 mix8;
+#X obj 457 484 audiotodac;
+#N canvas 683 25 430 781 help 0;
 #X obj 8 9 cnv 15 400 110 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X text 17 50 1) go to EDIT MODE: CMD+E (MAC) or CTRL+E (WIN);
@@ -33,47 +33,63 @@
 #X text 5 413 seq16;
 #X obj 8 182 dsp;
 #X text 7 218 clock;
-#X obj 9 594 kick;
-#X obj 7 527 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+#X obj 10 1088 kick;
+#X obj 8 1021 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
 0;
-#X text 8 545 instruments;
-#X text 7 573 kick;
-#X obj 7 687 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+#X text 9 1039 instruments;
+#X text 8 1067 kick;
+#X obj 10 1266 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
 0;
-#X obj 9 731 sample;
-#X obj 7 987 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
+#X obj 12 1310 sample;
+#X obj 10 1566 cnv 10 400 10 empty empty empty 20 12 0 14 -159808 -66577
 0;
-#X obj 9 1029 mix8;
-#X obj 10 1167 audiotodac;
-#X text 6 1145 audiotodac;
+#X obj 12 1608 mix8;
+#X obj 13 1746 audiotodac;
+#X text 9 1724 audiotodac;
 #X text 7 161 name: dsp;
-#X text 6 706 sample;
-#X text 7 1005 mix8;
-#X restore 863 15 pd help;
-#X text 14 16 OCTOPUS 2;
-#X text 1098 664 by lomz.net;
-#X obj 705 269 seq16prob;
-#X obj 699 486 kick;
-#X obj 674 471 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 205 208 kick;
-#X obj 360 201 kick;
-#X obj 704 161 seq16;
-#X obj 123 323 sample;
-#X obj 1073 528 octopus;
+#X text 9 1285 sample;
+#X text 10 1584 mix8;
+#X obj 7 548 seq16prob;
+#X text 6 522 seq16prob;
+#X obj 6 762 mtoggle;
+#X text 4 737 mtoggle;
+#X obj 5 864 probability;
+#X text 3 841 probability;
+#X obj 12 1191 hihat;
+#X text 9 1171 hihat;
+#X restore 708 623 pd help;
+#X obj 600 149 seq16prob;
+#X obj 457 252 kick;
+#X obj 305 149 seq16;
+#X obj 22 387 sample;
+#X obj 1069 532 octopus;
+#X obj 137 386 sample;
+#X obj 162 149 kick;
+#X obj 931 148 probability;
+#X obj 932 205 kick;
+#X obj 931 298 hihat;
+#X text 767 624 Objects list;
 #X connect 0 0 4 0;
-#X connect 0 0 11 0;
-#X connect 4 1 14 0;
-#X connect 4 1 16 0;
-#X connect 4 2 15 0;
-#X connect 4 2 17 0;
+#X connect 0 0 9 0;
+#X connect 4 0 14 0;
+#X connect 4 0 16 0;
+#X connect 4 0 15 0;
+#X connect 4 1 11 0;
+#X connect 4 1 18 1;
+#X connect 4 2 12 0;
 #X connect 6 0 7 0;
 #X connect 6 1 7 1;
-#X connect 11 0 12 0;
-#X connect 12 0 6 0;
-#X connect 13 0 12 0;
-#X connect 14 0 6 1;
-#X connect 15 0 6 2;
-#X connect 16 0 17 1;
-#X connect 17 0 6 3;
-#X connect 17 1 6 3;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 11 0 12 1;
+#X connect 11 0 14 1;
+#X connect 12 0 6 3;
+#X connect 12 1 6 3;
+#X connect 14 0 6 4;
+#X connect 14 1 6 4;
+#X connect 15 0 6 5;
+#X connect 16 0 17 0;
+#X connect 16 0 18 2;
+#X connect 16 1 18 0;
+#X connect 17 0 6 6;
+#X connect 18 0 6 7;
